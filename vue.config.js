@@ -1,5 +1,3 @@
-const RAP = ''
-
 module.exports = {
     outputDir: '../static-build/vue-project',
     assetsDir: './static',
@@ -23,7 +21,7 @@ module.exports = {
         open: false,
         proxy: {
             '/api': {
-                target: RAP, // 默认RAP, 可修改为开发IP
+                target: 'http://127.0.0.1:3000', // 可修改为开发IP
                 pathRewrite: {
                     '^/api': ''
                 }

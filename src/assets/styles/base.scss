@@ -1,0 +1,79 @@
+@import "./base.mixin.scss";
+
+.txt {
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+}
+.num {
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+}
+
+//display
+.db { display: block; }
+.di { display: inline; }
+.dib { display: inline-block; }
+.none { display: none; }
+.show { display: block; }
+
+.hide { visibility: hidden; }
+
+//float
+.fl { float: left; }
+.fr { float: right; }
+
+//clear
+.clearfix { @include clearfix; }
+
+//font-size
+@for $i from 12 to 80 {
+    @if($i%2 == 0) {
+        .fz#{$i} {
+            @include fz($i+px);
+        }
+    }
+}
+
+//text-align
+.tl { text-align: left; }
+.tr { text-align: right; }
+.tc { text-align: center; }
+.tj { text-align: justify; }
+
+.vm { vertical-align: middle; }
+
+//margin padding
+@for $i from 0 to 100 {
+    @if($i%5 == 0) {
+        .m#{$i} {
+            @include m($i+px);
+        }
+        .mt#{$i} {
+            @include mt($i+px);
+        }
+        .mr#{$i} {
+            @include mr($i+px);
+        }
+        .mb#{$i} {
+            @include mb($i+px);
+        }
+        .ml#{$i} {
+            @include ml($i+px);
+        }
+        .p#{$i} {
+            @include p($i+px);
+        }
+        .pt#{$i} {
+            @include pt($i+px);
+        }
+        .pr#{$i} {
+            @include pr($i+px);
+        }
+        .pb#{$i} {
+            @include pb($i+px);
+        }
+        .pl#{$i} {
+            @include pl($i+px);
+        }
+    }
+}

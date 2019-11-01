@@ -1,0 +1,7 @@
+@function wpx2rem($px){
+    @return $px/$wScale + rem;
+}
+
+@function hpx2rem($px){
+    @return $px/$hScale + rem;
+}

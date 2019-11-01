@@ -1,0 +1,68 @@
+//margin padding
+@mixin m($m) { margin: $m; }
+@mixin mt($m) { margin-top: $m; }
+@mixin mr($m) { margin-right: $m; }
+@mixin mb($m) { margin-bottom: $m; }
+@mixin ml($m) { margin-left: $m; }
+
+@mixin p($p) { padding: $p; }
+@mixin pt($p) { padding-top: $p; }
+@mixin pr($p) { padding-right: $p; }
+@mixin pb($p) { padding-bottom: $p; }
+@mixin pl($p) { padding-left: $p; }
+
+//height line-height
+@mixin w($w) { width: $w; }
+@mixin h($h) { height: $h; }
+@mixin lh($lh) { line-height: $lh; }
+
+//font-size
+@mixin fz($fz) { font-size: $fz; }
+
+//color
+@mixin c($c) { color: $c; }
+
+//border
+@mixin b($c:#f00, $w:1px, $s:solid) { border: $w $s $c; }
+@mixin bt($c:#f00, $w:1px, $s:solid){ border-top: $w $s $c; }
+@mixin br($c:#f00, $w:1px, $s:solid){ border-right: $w $s $c; }
+@mixin bb($c:#f00, $w:1px, $s:solid){ border-bottom: $w $s $c; }
+@mixin bl($c:#f00, $w:1px, $s:solid){ border-left: $w $s $c; }
+
+/*
+ top right bottom left
+*/
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+
+/*
+* Apply a CSS3 border radius
+* @include border-radius(4px);
+*/
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+/*
+ * Mixin for clearfix
+ * @include clearfix;
+*/
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    *zoom: 1;
+}
